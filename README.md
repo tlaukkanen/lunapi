@@ -10,3 +10,7 @@ Requirements:
  - Adafruit 16 Channel Servo Driver Hat
 
 
+# Usage
+
+sudo python3 tracktor.py
+

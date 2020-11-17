@@ -12,11 +12,15 @@ kit.servo[0].angle = 100
 
 time.sleep(1)
 
-motors.motor2.throttle = 1.0
+motors.motor2.throttle = -1.0
 
 kit.servo[0].angle = 130
 
-time.sleep(1)
+time.sleep(2)
+
+kit.servo[0].angle = 100
+
+time.sleep(2)
 
 motors.motor2.throttle = 0
 kit.servo[0].angle = 100
