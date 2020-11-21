@@ -9,6 +9,12 @@ Requirements:
  - WaveShare Motor Driver Hat
  - Adafruit 16 Channel Servo Driver Hat
 
+# Installing
+
+```
+sudo pip3 install adafruit-circuitpython-ssd1306 adafruit-circuitpython-servokit adafruit-circuitpython-motorkit
+```
+
 
 # Usage
 
