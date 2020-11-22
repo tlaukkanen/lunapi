@@ -12,19 +12,21 @@ motors = MotorKit(0x40)
 
 time.sleep(1)
 
-motors.motor2.throttle = 1.0
-motors.motor1.throttle = 1.0
-
-#kit.servo[0].angle = 130
-
-#kit.servo[0].angle = 100
+motors.motor2.throttle =  0.50
+motors.motor1.throttle = -0.50
 
 time.sleep(2)
 
 motors.motor2.throttle = 0
 motors.motor1.throttle = 0
 #kit.servo[0].angle = 100
+time.sleep(1)
 #time.sleep(1)
+motors.motor2.throttle = -1.0
+motors.motor1.throttle =  1.0
 #kit.servo[0].angle = 70
 #time.sleep(1)
 #kit.servo[0].angle = 100
+time.sleep(2)
+motors.motor2.throttle = 0
+motors.motor1.throttle = 0

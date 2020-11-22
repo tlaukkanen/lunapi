@@ -34,7 +34,7 @@ image = Image.new("1", (oled.width, oled.height))
 draw = ImageDraw.Draw(image)
 
 # Load a font in 2 different sizes.
-font = ImageFont.load_default()
+font = ImageFont.truetype("fonts/EarlyGameBoy.ttf", 16)
 
 offset = 0
 
@@ -54,8 +54,9 @@ while loop_count > 0:
     draw.rectangle((0, 0, width, height), outline=0, fill=0)
     #oled.fill(0)
 
-    text = f"{result:4.2f} cm"
-    draw.text((0, 0), text, font=font, fill=255)
+    draw.text((0, 0), "Robo R01", font=font, fill=255)
+    text = f"{result:3.1f} cm"
+    draw.text((0, 16), text, font=font, fill=255)
     oled.image(image)
     oled.show()
 

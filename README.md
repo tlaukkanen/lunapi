@@ -12,7 +12,13 @@ Requirements:
 # Installing
 
 ```
-sudo pip3 install adafruit-circuitpython-ssd1306 adafruit-circuitpython-servokit adafruit-circuitpython-motorkit
+sudo pip3 install adafruit-circuitpython-ssd1306 \
+  adafruit-circuitpython-servokit \
+  adafruit-circuitpython-motorkit \
+  pillow \
+  Bluetin_Echo
+
+sudo apt-get install python3-pil libopenjp2-7
 ```
 
 
