@@ -12,7 +12,7 @@ class Face:
     RESET_PIN = digitalio.DigitalInOut(board.D4)
 
     self.i2c = board.I2C()
-    self.oled = adafruit_ssd1306.SSD1306_I2C(128, 64, self.i2c, addr=0x3C, reset=RESET_PIN)
+    self.oled = adafruit_ssd1306.SSD1306_I2C(128, 32, self.i2c, addr=0x3C, reset=RESET_PIN)
     #oled.rotation = 2
     
     # Clear display
@@ -27,21 +27,21 @@ class Face:
     self.draw = ImageDraw.Draw(self.image)
 
     # Load a font in 2 different sizes.
-    self.font = ImageFont.truetype("fonts/EarlyGameBoy.ttf", 16)
+    self.font = ImageFont.truetype("../fonts/EarlyGameBoy.ttf", 16)
 
   def drawEyes(self):
     x = random.randint(0, 100)
-    y = random.randint(0, 36)
+    y = random.randint(0, 4)
 
     # Draw a black filled box to clear the image.
     self.draw.rectangle((0, 0, self.width, self.height), outline=0, fill=0)
     #oled.fill(0)
 
     self.draw.ellipse((x,y,x+28,y+28), outline=0, fill=255)
-    self.draw.ellipse((x+4,y+4,x+14,y+14), outline=0, fill=0)
+    self.draw.ellipse((x+10,y+10,x+18,y+18), outline=0, fill=0)
     
     # draw.text((0, 0), "Robo R01", font=font, fill=255)
-    self.oled.image(image)
+    self.oled.image(self.image)
     self.oled.show()
 
   def drawBlinkEyes(self):
@@ -53,3 +53,11 @@ class Face:
 
   def poweroff(self):
     self.oled.poweroff()
+
+
+face = Face()
+face.drawEyes()
+time.sleep(2)
+face.drawEyes()
+time.sleep(2)
+face.poweroff()
