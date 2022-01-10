@@ -8,15 +8,19 @@ Requirements:
    - adafruit-circuitpython-servokit, adafruit-circuitpython-motorkit
  - WaveShare Motor Driver Hat
  - Adafruit 16 Channel Servo Driver Hat
+ - Raspberry Camera v1.3
+ - LED Matrix 16x8
 
-# Installing
+# Installing dependencies
 
 ```
 sudo pip3 install adafruit-circuitpython-ssd1306 \
   adafruit-circuitpython-servokit \
   adafruit-circuitpython-motorkit \
   pillow \
-  Bluetin_Echo
+  Bluetin_Echo \
+  luma.led_matrix \
+  python3-picamera
 
 sudo apt-get install python3-pil libopenjp2-7
 ```
